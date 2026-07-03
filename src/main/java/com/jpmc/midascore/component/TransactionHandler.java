@@ -37,5 +37,7 @@ public class TransactionHandler {
 
         TransactionRecord record = new TransactionRecord(sender, recipient, transaction.getAmount());
         transactionRepository.save(record);
+UserRecord waldorf = userRepository.findByName("waldorf");
+if (waldorf != null) System.out.println("WALDORF BALANCE: " + waldorf.getBalance());
     }
 }
